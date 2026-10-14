@@ -1,0 +1,703 @@
+.uni-dashboard {
+  --uni-cream: #f8f7f3;
+  --uni-ink: #292b39;
+  --uni-muted: #6c6e75;
+  --uni-sage: #e4ece2;
+  --uni-indigo: #6663aa;
+  --uni-border: #e9e8e2;
+  background: var(--uni-cream);
+  color: var(--uni-ink);
+  font-family: inherit;
+  line-height: 1.5;
+  padding: 44px clamp(20px, 4vw, 64px) 24px;
+  min-width: 0;
+}
+
+.uni-dashboard *,
+.uni-dashboard *::before,
+.uni-dashboard *::after {
+  box-sizing: border-box;
+}
+.uni-dashboard h1,
+.uni-dashboard h2,
+.uni-dashboard h3,
+.uni-dashboard p,
+.uni-dashboard figure {
+  margin: 0;
+}
+.uni-dashboard ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.uni-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.uni-eyebrow,
+.uni-kicker {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+.uni-eyebrow {
+  color: var(--uni-indigo);
+  margin-bottom: 20px;
+}
+.uni-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+}
+.uni-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(36px, 4.3vw, 58px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -1.9px;
+}
+.uni-subtitle {
+  color: var(--uni-muted);
+  max-width: 510px;
+  font-size: 14px;
+  margin-top: 18px !important;
+  line-height: 1.8;
+}
+.uni-partner {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  flex-shrink: 0;
+  padding: 20px 0 20px 25px;
+  border-left: 1px solid #dedfd5;
+}
+.uni-partner-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #d7e0d3;
+  border-radius: 50%;
+  color: #586b55;
+  background: var(--uni-sage);
+  flex-shrink: 0;
+}
+.uni-partner-name {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 18px;
+}
+.uni-partner-detail {
+  color: var(--uni-muted);
+  font-size: 11px;
+  margin-top: 4px !important;
+}
+.uni-sponsored {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  color: #4e634a;
+  font-size: 10px;
+  background: var(--uni-sage);
+  border-radius: 20px;
+  padding: 5px 9px;
+}
+.uni-status-dot {
+  width: 5px;
+  height: 5px;
+  background: #637f5e;
+  border-radius: 50%;
+}
+.uni-sample {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #efedf7;
+  border: 1px solid #e1ddee;
+  border-radius: 10px;
+  padding: 13px 17px;
+  margin: 30px 0 23px;
+  color: #565273;
+  font-size: 12px;
+}
+.uni-sample-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.uni-period {
+  margin-left: auto;
+  padding-left: 16px;
+  border-left: 1px solid #d9d5e5;
+  font-size: 10px;
+  white-space: nowrap;
+}
+.uni-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 22px;
+}
+.uni-card {
+  background: #fff;
+  border: 1px solid var(--uni-border);
+  border-radius: 15px;
+  box-shadow: 0 3px 9px #292b3903;
+}
+.uni-metric {
+  padding: 21px 22px 19px;
+}
+.uni-metric-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.uni-metric-top h2 {
+  font-size: 12px;
+  font-weight: 500;
+}
+.uni-metric-top svg {
+  color: #7c8277;
+  flex-shrink: 0;
+}
+.uni-metric-value {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 43px;
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+  margin: 15px 0 8px !important;
+}
+.uni-metric-detail {
+  font-size: 10px;
+  color: var(--uni-muted);
+}
+.uni-charts {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  gap: 22px;
+}
+.uni-participation,
+.uni-courses,
+.uni-highlights {
+  padding: 26px;
+}
+.uni-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+.uni-kicker {
+  color: #7d8177;
+  font-size: 9px;
+  letter-spacing: 1.4px;
+  margin-bottom: 8px !important;
+}
+.uni-section-heading h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.25;
+  letter-spacing: -0.4px;
+}
+.uni-section-heading > svg {
+  color: #8b9185;
+  flex-shrink: 0;
+}
+.uni-tag {
+  background: var(--uni-cream);
+  padding: 6px 9px;
+  font-size: 10px;
+  color: var(--uni-muted);
+  border: 1px solid var(--uni-border);
+  border-radius: 6px;
+  white-space: nowrap;
+}
+.uni-section-description {
+  color: var(--uni-muted);
+  font-size: 11px;
+  margin-top: 10px !important;
+}
+.uni-chart-figure {
+  margin-top: 31px !important;
+}
+.uni-chart {
+  display: flex;
+  gap: 12px;
+  height: 203px;
+  padding-bottom: 26px;
+}
+.uni-chart-axis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #85858e;
+  font-size: 9px;
+  width: 29px;
+  text-align: right;
+  position: relative;
+  top: -6px;
+}
+.uni-chart-plot {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+.uni-chart-grid {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.uni-chart-grid i {
+  border-top: 1px dashed #e9e8ed;
+  width: 100%;
+}
+.uni-chart-bars {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  gap: 12px;
+  height: 100%;
+  padding: 0 7px;
+}
+.uni-chart-column {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  max-width: 48px;
+  height: 100%;
+}
+.uni-chart-bar {
+  position: relative;
+  background: #dcdbea;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+.uni-chart-bar-current {
+  background: var(--uni-indigo);
+}
+.uni-chart-value {
+  position: absolute;
+  bottom: calc(100% + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  color: #777482;
+  font-weight: 600;
+}
+.uni-chart-bar-current .uni-chart-value {
+  color: var(--uni-indigo);
+}
+.uni-chart-label {
+  position: absolute;
+  top: calc(100% + 10px);
+  white-space: nowrap;
+  font-size: 9px;
+  color: var(--uni-muted);
+}
+.uni-chart-caption {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+  font-size: 9px;
+  color: var(--uni-muted);
+}
+.uni-chart-legend {
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  background: var(--uni-indigo);
+}
+.uni-caption-note {
+  margin-left: auto;
+  color: #7d7c84;
+}
+.uni-course-stack {
+  display: flex;
+  overflow: hidden;
+  gap: 3px;
+  height: 15px;
+  border-radius: 5px;
+  margin: 27px 0 15px;
+}
+.uni-color-indigo {
+  background: #7774ae;
+}
+.uni-color-sage {
+  background: #a9bba3;
+}
+.uni-color-sand {
+  background: #dbc9a8;
+}
+.uni-color-lavender {
+  background: #c8c4da;
+}
+.uni-course-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0efeb;
+}
+.uni-course-list li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.uni-course-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+.uni-course-name {
+  font-size: 12px;
+}
+.uni-course-name > span {
+  display: block;
+  color: var(--uni-muted);
+  font-size: 10px;
+  margin-top: 2px;
+}
+.uni-course-count {
+  margin-left: auto;
+  font-size: 14px;
+  text-align: right;
+}
+.uni-course-count > span {
+  font-size: 9px;
+  color: var(--uni-muted);
+  margin-left: 5px;
+}
+.uni-bottom-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 22px;
+  margin-top: 22px;
+}
+.uni-highlight-list {
+  margin-top: 24px !important;
+}
+.uni-highlight-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding-bottom: 20px;
+}
+.uni-highlight-list li:last-child {
+  padding-bottom: 0;
+}
+.uni-highlight-icon {
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: #f1f3ed;
+  color: #6f7f64;
+  width: 35px;
+  height: 35px;
+  flex-shrink: 0;
+}
+.uni-highlight-list h3 {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+.uni-highlight-list p {
+  color: var(--uni-muted);
+  font-size: 11px;
+  line-height: 1.8;
+  max-width: 400px;
+}
+.uni-subscription {
+  background: var(--uni-sage);
+  border: 1px solid #d9e3d6;
+  border-radius: 15px;
+  padding: 26px;
+  position: relative;
+}
+.uni-subscription-icon {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  color: #6d8264;
+}
+.uni-subscription .uni-kicker {
+  padding-right: 36px;
+  color: #62715b;
+}
+.uni-subscription h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 27px;
+  font-weight: 400;
+  letter-spacing: -0.6px;
+  line-height: 1.2;
+  margin-top: 14px;
+}
+.uni-subscription-description {
+  color: #5f695b;
+  font-size: 11px;
+  line-height: 1.8;
+  margin-top: 12px !important;
+  max-width: 360px;
+}
+.uni-benefits {
+  margin-top: 18px !important;
+}
+.uni-benefits li {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 11px;
+  margin-top: 10px;
+}
+.uni-benefits svg {
+  flex-shrink: 0;
+  color: #607859;
+  margin-top: 1px;
+}
+.uni-subscription-footnote {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border-top: 1px solid #cdd9c8;
+  margin-top: 21px;
+  padding-top: 13px;
+  color: #5e7056;
+  font-size: 10px;
+}
+.uni-subscription-footnote svg {
+  flex-shrink: 0;
+}
+.uni-privacy {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid var(--uni-border);
+  border-radius: 11px;
+  padding: 19px 22px;
+  margin-top: 23px;
+}
+.uni-privacy-icon {
+  flex-shrink: 0;
+  color: #7a7d71;
+}
+.uni-privacy h2 {
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.uni-privacy p {
+  font-size: 10px;
+  color: var(--uni-muted);
+  line-height: 1.8;
+  max-width: 720px;
+}
+.uni-privacy-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  color: #67745e;
+  font-size: 9px;
+  white-space: nowrap;
+}
+.uni-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 9px;
+  color: #777971;
+  margin-top: 22px;
+}
+.uni-footer > span:last-child {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (min-width: 1500px) {
+  .uni-dashboard {
+    padding-top: 52px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .uni-heading-row {
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .uni-partner {
+    padding-left: 18px;
+    max-width: 290px;
+  }
+  .uni-partner-icon {
+    width: 38px;
+    height: 38px;
+  }
+  .uni-partner-name {
+    font-size: 16px;
+  }
+  .uni-period {
+    display: none;
+  }
+  .uni-metrics {
+    gap: 12px;
+  }
+  .uni-metric {
+    padding: 18px 16px;
+  }
+  .uni-section-heading h2 {
+    font-size: 20px;
+  }
+  .uni-participation,
+  .uni-courses,
+  .uni-highlights,
+  .uni-subscription {
+    padding: 22px;
+  }
+  .uni-privacy-badge {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .uni-dashboard {
+    padding: 30px 22px 22px;
+  }
+  .uni-heading-row {
+    flex-direction: column;
+  }
+  .uni-partner {
+    max-width: none;
+    padding: 0;
+    border: 0;
+  }
+  .uni-title {
+    font-size: 44px;
+  }
+  .uni-subtitle {
+    max-width: 560px;
+  }
+  .uni-sample {
+    align-items: flex-start;
+    margin-top: 24px;
+  }
+  .uni-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .uni-charts,
+  .uni-bottom-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+  .uni-courses {
+    padding-bottom: 25px;
+  }
+  .uni-course-stack {
+    margin-top: 22px;
+  }
+  .uni-course-list li {
+    padding: 12px 0;
+  }
+  .uni-highlight-list p {
+    max-width: none;
+  }
+  .uni-subscription-description {
+    max-width: 460px;
+  }
+}
+
+@media (max-width: 440px) {
+  .uni-dashboard {
+    padding: 25px 16px 20px;
+  }
+  .uni-title {
+    font-size: 38px;
+    letter-spacing: -1.3px;
+  }
+  .uni-eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.3px;
+  }
+  .uni-sample {
+    flex-direction: column;
+    gap: 6px;
+    font-size: 11px;
+  }
+  .uni-metric {
+    padding: 16px 13px;
+  }
+  .uni-metric-top {
+    gap: 6px;
+    align-items: flex-start;
+  }
+  .uni-metric-top h2 {
+    font-size: 11px;
+  }
+  .uni-metric-top svg {
+    width: 16px;
+    height: 16px;
+  }
+  .uni-metric-value {
+    font-size: 38px;
+  }
+  .uni-metric-detail {
+    font-size: 9px;
+  }
+  .uni-participation,
+  .uni-courses,
+  .uni-highlights,
+  .uni-subscription {
+    padding: 20px 16px;
+  }
+  .uni-section-heading {
+    gap: 10px;
+  }
+  .uni-section-heading h2 {
+    font-size: 19px;
+  }
+  .uni-tag {
+    font-size: 9px;
+    padding: 5px 7px;
+  }
+  .uni-chart {
+    gap: 7px;
+  }
+  .uni-chart-bars {
+    gap: 9px;
+    padding: 0 3px;
+  }
+  .uni-chart-caption {
+    flex-wrap: wrap;
+    row-gap: 5px;
+  }
+  .uni-caption-note {
+    flex-basis: 100%;
+    margin-left: 13px;
+  }
+  .uni-subscription-icon {
+    right: 17px;
+  }
+  .uni-subscription h2 {
+    font-size: 25px;
+  }
+  .uni-privacy {
+    padding: 16px;
+    align-items: flex-start;
+    gap: 11px;
+  }
+  .uni-footer {
+    flex-direction: column;
+    gap: 6px;
+  }
+}

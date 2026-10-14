@@ -1,0 +1,511 @@
+/* Light remains the original design; theme selection is owned by React. */
+:root {
+  color-scheme: light;
+}
+
+.appearance-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.appearance-controls .language-control {
+  width: 76px;
+  min-width: 76px;
+  height: 36px;
+  padding: 0 6px;
+  border: 1px solid #cecec3;
+  border-radius: 7px;
+  background: #fdfcf8;
+  color: #42433e;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.appearance-controls .theme-toggle {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 6px;
+  border: 1px solid #cecec3;
+  border-radius: 7px;
+  background: #fdfcf8;
+  color: #625e99;
+  flex-shrink: 0;
+}
+
+.appearance-controls .theme-toggle svg {
+  width: 24px;
+  height: 24px;
+}
+
+.appearance-controls .theme-toggle:hover {
+  background: #e4dfef;
+  border-color: #a69bc6;
+}
+
+.appearance-controls :is(select, button):focus-visible {
+  outline: 3px solid #625e99;
+  outline-offset: 2px;
+}
+
+.sidebar-profile .university-avatar {
+  display: inline-grid;
+  place-items: center;
+  width: 35px;
+  height: 35px;
+  flex-shrink: 0;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: #e8eee3;
+  color: #526548;
+}
+
+/* The import precedes legacy rules, so root qualification is intentional. */
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --paper: #1c1e23;
+  --ink: #f0eadf;
+  --muted: #bbb8b0;
+  --indigo: #c5b8ed;
+  --lavender: #353044;
+  --sage: #2d3931;
+  --line: #45454b;
+  --theme-surface: #25272e;
+  --theme-raised: #2e3038;
+  --theme-sand: #3c352c;
+  --theme-sage-text: #c4d8ba;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+html[data-theme='dark'] body {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+html[data-theme='dark'] ::selection {
+  background: #615378;
+  color: #fff8ed;
+}
+
+html[data-theme='dark'] :is(.sidebar, .workspace-header, .demo-bar, .mobile-nav) {
+  background: #22252a;
+  color: var(--muted);
+  border-color: var(--line);
+}
+
+html[data-theme='dark'] :is(.card, .floating-pod, .modal, .uni-card) {
+  background: var(--theme-surface);
+  color: var(--ink);
+  border-color: var(--line);
+  box-shadow: 0 5px 20px #00000020;
+}
+
+html[data-theme='dark'] :is(.connection-card, .guided-prompt, .match-filter-bar, .date-tile, .badge) {
+  background: var(--theme-raised);
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+html[data-theme='dark'] :is(.onboarding-aside, .welcome-note, .sidebar-quote, .institution-strip, .access-institution, .finish-session, .progress-hero) {
+  background: var(--sage);
+  border-color: #4b5b4e;
+  color: var(--theme-sage-text);
+}
+
+html[data-theme='dark'] :is(.goal-card, .recommended-label, .pod-symbol, .mini-icon, .badge.lavender) {
+  background: var(--lavender);
+  border-color: #615675;
+  color: var(--indigo);
+}
+
+html[data-theme='dark'] .match-card.recommended {
+  border-color: #9986bb;
+  box-shadow: 0 4px 20px #00000026;
+}
+
+html[data-theme='dark'] :is(.badge.sage, .progress-hero .badge, .institution-icon, .empty-symbol, .symbol-2) {
+  background: var(--sage);
+  color: var(--theme-sage-text);
+}
+
+html[data-theme='dark'] :is(.notice, .symbol-1) {
+  background: var(--theme-sand);
+  border-color: #685b48;
+  color: #ead2a6;
+}
+
+html[data-theme='dark'] :is(.nav-item, .mobile-nav button, .view-switch button, .reset-button, .icon-button) {
+  color: var(--muted);
+}
+
+html[data-theme='dark'] :is(.nav-item:hover, .icon-button:hover) {
+  background: var(--theme-raised);
+  color: var(--ink);
+}
+
+html[data-theme='dark'] :is(.nav-item.active, .agenda-step.active, .option.selected) {
+  background: var(--lavender);
+  border-color: #9986bb;
+  color: #e0d5fa;
+}
+
+html[data-theme='dark'] .view-switch {
+  background: #191b20;
+  border-color: var(--line);
+}
+
+html[data-theme='dark'] .view-switch button.selected {
+  background: #494057;
+  color: #f4ebff;
+  box-shadow: 0 1px 4px #00000030;
+}
+
+html[data-theme='dark'] :is(.text-button, .inline-link, .landing-header .text-button) {
+  color: var(--indigo);
+}
+
+html[data-theme='dark'] :is(.text-button:hover, .reset-button:hover, .inline-link:hover) {
+  color: #e5d9ff;
+}
+
+html[data-theme='dark'] .button.primary {
+  background: #c5b8ed;
+  color: #242032;
+  box-shadow: 0 3px 8px #00000025;
+}
+
+html[data-theme='dark'] .button.primary:hover:not(:disabled) {
+  background: #dacdfb;
+}
+
+html[data-theme='dark'] .button.secondary {
+  background: var(--theme-raised);
+  color: #e0d5fa;
+  border-color: #756786;
+}
+
+html[data-theme='dark'] .button.secondary:hover:not(:disabled) {
+  background: #40384e;
+  border-color: #b2a0cc;
+}
+
+html[data-theme='dark'] :is(input, select, textarea) {
+  color: var(--ink);
+  accent-color: var(--indigo);
+  caret-color: var(--indigo);
+}
+
+html[data-theme='dark'] :is(.field input, .field select, .field textarea, .appearance-controls .language-control) {
+  background: #202228;
+  color: var(--ink);
+  border-color: #686570;
+}
+
+html[data-theme='dark'] :is(input, textarea)::placeholder {
+  color: #aaa6b2;
+  opacity: 1;
+}
+
+html[data-theme='dark'] select option {
+  background: #25272e;
+  color: var(--ink);
+}
+
+html[data-theme='dark'] .appearance-controls .theme-toggle {
+  background: var(--theme-raised);
+  color: #e6d1a5;
+  border-color: #686570;
+}
+
+html[data-theme='dark'] .appearance-controls .theme-toggle:hover {
+  background: #40384e;
+  border-color: #b2a0cc;
+}
+
+html[data-theme='dark'] :is(button, a, input, select, textarea):focus-visible {
+  outline: 3px solid #d2bff5;
+  outline-offset: 3px;
+}
+
+/* Replace hardcoded secondary text, including the denser desktop pod rules. */
+html[data-theme='dark'] :is(.landing-tagline, .landing-header-right, .hero-description, .hero-detail, .hero-assurance, .hero-social small, .art-eyebrow, .art-caption, .floating-pod p, .floating-pod-bottom > span, .principle-number, .principle-intro .eyebrow, .landing-principles .principle p, .landing-footer, .institution-label small, .sidebar-profile small, .nav-label, .sidebar-quote small, .workspace-breadcrumb, .workspace-footer, .page-heading p, .page-heading .eyebrow, .form-top p, .step-pill, .field > span, .level-hint, .timezone, .form-bottom > span, .subtle-note, .onboarding-aside > p, .onboarding-aside li span, .aside-note, .results-heading > span, .match-description, .match-schedule, .match-schedule > span, .match-members > span, .match-reasons > span:not(.eyebrow), .matching-footnote, .empty-state p, .pod-meta, .pod-layout .welcome-note p, .pod-layout .welcome-note .eyebrow, .next-session > p, .session-schedule > div:not(.avatar-stack) span, .agenda-preview span, .agenda-preview small, .session-bottom > span, .fictional-label, .pod-layout .connection-card p, .note-author, .members-card .section-topline > span, .member-row small, .members-footnote, .goal-card p, .goal-progress, .agenda-step small, .session-meter > div, .session-privacy, .guided-time, .guided-description, .guided-prompt .eyebrow, .worked-example, .session-options legend, .reflection-field small, .guided-bottom > span, .finish-session small, .session-disclaimer, .progress-hero > p, .progress-stats span, .saved-reflection, .private-label, .next-week p, .progress-note, .modal > p, .modal > .eyebrow, .access-institution span, .simulation-note, .eyebrow) {
+  color: var(--muted);
+}
+
+html[data-theme='dark'] :is(.hero-social strong, .field, .onboarding-aside li strong, .institution-strip strong, .match-members strong, .session-schedule strong, .agenda-preview strong, .member-row strong, .guided-prompt h3, .reflection-summary h2, .next-week h2, .progress-note strong, .access-institution strong) {
+  color: var(--ink);
+}
+
+html[data-theme='dark'] :is(.hero-copy h1 span, .goal-card h3, .goal-card > .eyebrow, .session-meter strong, .you-label, .nav-dot) {
+  color: var(--indigo);
+}
+
+html[data-theme='dark'] :is(.brand-mark, .brand-dot, .small-flower, .tiny-star, .note-star, .welcome-heart, .onboarding-aside li, .level-hint svg, .match-reasons svg, .finish-session strong, .progress-hero h2, .progress-stats strong, .progress-flower) {
+  color: var(--theme-sage-text);
+}
+
+html[data-theme='dark'] :is(.brand-mark, .match-reasons, .form-bottom, .aside-note, .agenda-preview, .agenda-preview > div, .members-footnote, .goal-progress, .session-meter, .step-circle, .worked-example, .guided-bottom, .progress-stats, .saved-reflection) {
+  border-color: var(--line);
+}
+
+html[data-theme='dark'] :is(.live-dot, .nav-dot) {
+  background: #b4c7a4;
+}
+
+html[data-theme='dark'] .agenda-step {
+  color: var(--ink);
+}
+
+html[data-theme='dark'] .agenda-step.active .step-circle {
+  border-color: #b6a1d5;
+}
+
+html[data-theme='dark'] .agenda-step.done .step-circle {
+  background: var(--sage);
+  border-color: #687f60;
+  color: var(--theme-sage-text);
+}
+
+html[data-theme='dark'] .option {
+  background: #202228;
+  border-color: #686570;
+  color: var(--ink);
+}
+
+html[data-theme='dark'] .option:hover {
+  border-color: #b6a1d5;
+}
+
+html[data-theme='dark'] .option.selected {
+  background: var(--lavender);
+  border-color: #b6a1d5;
+  color: #e0d5fa;
+}
+
+html[data-theme='dark'] .session-meter progress {
+  background: #48454e;
+}
+
+html[data-theme='dark'] .session-meter progress::-webkit-progress-bar {
+  background: #48454e;
+}
+
+html[data-theme='dark'] .session-meter progress::-webkit-progress-value {
+  background: var(--indigo);
+}
+
+html[data-theme='dark'] .session-meter progress::-moz-progress-bar {
+  background: var(--indigo);
+}
+
+html[data-theme='dark'] .modal-backdrop {
+  background: #080a11b8;
+}
+
+html[data-theme='dark'] :is(.avatar, .university-avatar) {
+  border-color: var(--theme-surface);
+}
+
+html[data-theme='dark'] :is(.avatar.peach, .mini-icon.peach) {
+  background: #594237;
+  color: #f3cfb6;
+}
+
+html[data-theme='dark'] .avatar.lavender {
+  background: #4b405e;
+  color: #e2d4fc;
+}
+
+html[data-theme='dark'] :is(.avatar.sage, .mini-icon.sage, .university-avatar) {
+  background: #3c503d;
+  color: #d3e5c7;
+}
+
+html[data-theme='dark'] .avatar.sand {
+  background: #544a32;
+  color: #efdfb3;
+}
+
+html[data-theme='dark'] .avatar.rose {
+  background: #593e49;
+  color: #f5ceda;
+}
+
+html[data-theme='dark'] .avatar.indigo {
+  background: #645783;
+  color: #f5edff;
+}
+
+/* Keep the illustration's paper/objects softly lit rather than recoloring art wholesale. */
+html[data-theme='dark'] .study-illustration {
+  background: #464354;
+  border-color: #615975;
+}
+
+html[data-theme='dark'] .study-illustration ellipse[fill='#eee9de'] {
+  fill: #b6aea0;
+  stroke: #948b80;
+}
+
+html[data-theme='dark'] .study-illustration ellipse[fill='#e0dccf'] {
+  fill: #8c8479;
+}
+
+html[data-theme='dark'] .study-illustration rect:is([fill='#faf8f0'], [fill='#f7f5ed']) {
+  fill: #d2c9b6;
+}
+
+html[data-theme='dark'] .study-illustration circle[fill='#faf6ef'] {
+  fill: #c4b9a4;
+}
+
+html[data-theme='dark'] .illustration-note {
+  background: #25272eed;
+  color: #e1dbc9;
+}
+
+/* Dashboard variables are local in dashboard.css and must be overridden locally. */
+html[data-theme='dark'] .uni-dashboard {
+  --uni-cream: var(--paper);
+  --uni-ink: var(--ink);
+  --uni-muted: var(--muted);
+  --uni-sage: var(--sage);
+  --uni-indigo: var(--indigo);
+  --uni-border: var(--line);
+  /* Legacy integration declares a transparent background !important. */
+  background: var(--paper) !important;
+  color: var(--ink);
+}
+
+html[data-theme='dark'] :is(.uni-partner, .uni-period, .uni-course-list li, .uni-subscription-footnote, .uni-chart-grid i) {
+  border-color: var(--line);
+}
+
+html[data-theme='dark'] :is(.uni-partner-icon, .uni-sponsored, .uni-highlight-icon, .uni-subscription) {
+  background: var(--sage);
+  border-color: #4b5b4e;
+  color: var(--theme-sage-text);
+}
+
+html[data-theme='dark'] .uni-sample {
+  background: var(--lavender);
+  border-color: #615675;
+  color: #ded2f3;
+}
+
+html[data-theme='dark'] .uni-privacy {
+  background: var(--theme-surface);
+  border-color: var(--line);
+}
+
+html[data-theme='dark'] :is(.uni-kicker, .uni-metric-top svg, .uni-section-heading > svg, .uni-chart-axis, .uni-chart-value, .uni-caption-note, .uni-privacy-icon, .uni-footer) {
+  color: var(--muted);
+}
+
+html[data-theme='dark'] :is(.uni-subscription .uni-kicker, .uni-subscription-icon, .uni-subscription-description, .uni-benefits svg, .uni-subscription-footnote, .uni-privacy-badge) {
+  color: var(--theme-sage-text);
+}
+
+html[data-theme='dark'] .uni-status-dot {
+  background: #b4c7a4;
+}
+
+html[data-theme='dark'] .uni-chart-bar {
+  background: #766b8c;
+}
+
+html[data-theme='dark'] .uni-chart-bar-current,
+html[data-theme='dark'] .uni-color-indigo {
+  background: var(--indigo);
+}
+
+html[data-theme='dark'] .uni-chart-bar-current .uni-chart-value {
+  color: #ded2f3;
+}
+
+html[data-theme='dark'] .uni-color-sage {
+  background: #a8c09d;
+}
+
+html[data-theme='dark'] .uni-color-sand {
+  background: #d6bc8f;
+}
+
+html[data-theme='dark'] .uni-color-lavender {
+  background: #9484b3;
+}
+
+/* Higher specificity beats later mobile rules without changing desktop bar height. */
+@media (min-width: 751px) and (max-width: 1100px) {
+  .demo-bar:has(.appearance-controls) {
+    padding-inline: 16px;
+    gap: 12px;
+  }
+  .demo-bar .demo-actions:has(.appearance-controls) {
+    gap: 10px;
+  }
+  .demo-bar:has(.appearance-controls) .demo-bar-extra {
+    display: none;
+  }
+}
+
+@media (max-width: 750px) {
+  .demo-bar:has(.appearance-controls) {
+    height: auto;
+    min-height: 96px;
+    flex-wrap: wrap;
+    padding: 8px 12px;
+    gap: 6px;
+  }
+  .demo-bar:has(.appearance-controls) > span {
+    flex: 1 1 100%;
+    max-width: none;
+    min-width: 0;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+  }
+  .demo-bar .demo-actions:has(.appearance-controls) {
+    flex: 1 1 100%;
+    min-width: 0;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 6px;
+  }
+  .demo-bar:has(.appearance-controls) .view-switch {
+    margin-right: auto;
+    min-width: 0;
+  }
+  .demo-bar:has(.appearance-controls) .view-switch button {
+    min-height: 40px;
+    padding: 7px;
+    white-space: normal;
+  }
+  .demo-bar:has(.appearance-controls) .reset-button {
+    width: 40px;
+    min-height: 44px;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .appearance-controls {
+    gap: 6px;
+  }
+  .appearance-controls :is(.language-control, .theme-toggle) {
+    height: 44px;
+  }
+  .appearance-controls .theme-toggle {
+    width: 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .appearance-controls .theme-toggle {
+    transition: none;
+  }
+  html[data-theme='dark'] .session-meter progress::-webkit-progress-value {
+    transition: none;
+  }
+}
