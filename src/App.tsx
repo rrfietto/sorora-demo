@@ -119,13 +119,37 @@ function StudyIllustration() {
           strokeWidth="2"
         />
         <g transform="translate(129 133) rotate(-16)">
-          <rect width="122" height="153" rx="8" fill="#aaa5ca" />
+          <rect width="140" height="153" rx="8" fill="#aaa5ca" />
           <path d="M16 0v153" stroke="#817ba6" strokeWidth="2" />
-          <rect x="30" y="28" width="70" height="43" rx="3" fill="#f7f5ed" />
-          <text x="65" y="47" textAnchor="middle" fill="#514d72" fontFamily="Georgia" fontSize="12">
+          <rect
+            className="book-cover-label"
+            x="24"
+            y="24"
+            width="104"
+            height="48"
+            rx="4"
+            fill="#f7f5ed"
+          />
+          <text
+            className="book-cover-caption"
+            x="76"
+            y="43"
+            textAnchor="middle"
+            fill="#514d72"
+            fontFamily="Georgia"
+            fontSize="12"
+          >
             {t('small steps,')}
           </text>
-          <text x="65" y="62" textAnchor="middle" fill="#514d72" fontFamily="Georgia" fontSize="12">
+          <text
+            className="book-cover-caption"
+            x="76"
+            y="61"
+            textAnchor="middle"
+            fill="#514d72"
+            fontFamily="Georgia"
+            fontSize="12"
+          >
             {t('big ideas.')}
           </text>
         </g>

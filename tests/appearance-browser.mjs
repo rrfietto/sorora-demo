@@ -78,6 +78,23 @@ try {
     })
     assert.deepEqual(overflowing, [], 'all visible button text stays inside its button')
   }
+  const bookTextFits = async () => {
+    assert.ok(
+      await page.evaluate(() => {
+        const background = document.querySelector('.book-cover-label').getBBox()
+        return [...document.querySelectorAll('.book-cover-caption')].every((text) => {
+          const bounds = text.getBBox()
+          return (
+            bounds.x >= background.x + 4 &&
+            bounds.x + bounds.width <= background.x + background.width - 4 &&
+            bounds.y >= background.y + 3 &&
+            bounds.y + bounds.height <= background.y + background.height - 3
+          )
+        })
+      }),
+      'both notebook captions fit inside the label with padding',
+    )
+  }
   const savedDemo = () => page.evaluate(() => JSON.parse(localStorage.getItem('sorora-demo-v1')))
   const language = page.locator('select.language-control')
   const theme = page.locator('button.theme-toggle')
@@ -87,6 +104,7 @@ try {
   }
   await page.goto('http://127.0.0.1:4174')
   await page.getByRole('heading', { name: 'Study together. Belong together.' }).waitFor()
+  await bookTextFits()
   await theme.click()
   await page.waitForFunction(() => document.documentElement.dataset.theme === 'dark')
   assert.equal(
@@ -95,6 +113,7 @@ try {
   )
   await pickLanguage('pt-BR')
   assert.ok(!(await page.locator('h1').innerText()).includes('Study together'))
+  await bookTextFits()
   await noOverflow()
   await textFitsButtons()
   await page.locator('.hero-cta').click()
